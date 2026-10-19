@@ -1,11 +1,12 @@
 # Research skills
 
-Reusable workflows for literature research, evidence mapping, and interactive research atlases.
+Reusable workflows for literature research, evidence mapping, and interactive research topic explorers.
 
-## Build Research Atlas
+## Build Research Topic Explorer
 
 [`build-research-atlas`](build-research-atlas/SKILL.md) turns a research topic or seed paper into a sourced literature map and a self-contained interactive HTML file. It guides an AI assistant through primary-source research; the included Python tools validate and render the collected evidence. The tools do **not** search the literature or verify scientific claims automatically.
 
+- Use a compact **Research Topic** heading and **EN / 한국어** switch; selection, zoom, and reading state survive language changes. Content translations are supplied in the dataset, with no translation service or network dependency.
 - Trace antecedents, extensions, applications, replications, critiques, and alternatives.
 - Explain input → output → learning objective before architecture and equations.
 - Separate a team's prior research question, the paper's contribution, and later direction.
@@ -31,7 +32,8 @@ Then invoke it with a topic:
 $build-research-atlas
 Research JEPA from its original papers through major follow-up studies.
 Include antecedents, critiques, alternatives, and the researchers' research context.
-Create an English interactive HTML atlas with attributed figures and a researcher map.
+Create an English/Korean interactive HTML research map with attributed figures and a researcher map.
+Use a concise Research Topic heading and omit introductory or click-instruction paragraphs.
 Explain inputs, outputs, and learning objectives intuitively, and label uncertain links.
 ```
 
@@ -41,7 +43,8 @@ Explain inputs, outputs, and learning objectives intuitively, and label uncertai
 $build-research-atlas
 JEPA의 원논문과 주요 후속 연구를 조사해줘.
 연구 계보, 비판과 대안, 연구진의 연구 맥락을 정리하고,
-출처가 있는 피규어와 연구자 관계도를 포함한 영어 HTML로 만들어줘.
+출처가 있는 피규어와 연구자 관계도를 포함하고 영어/한국어를 전환할 수 있는 HTML로 만들어줘.
+상단은 Research Topic 제목으로 간결하게 구성하고 소개·조작 안내 문단은 빼줘.
 입력·출력·학습 목표를 먼저 설명하고 불확실한 관계는 표시해줘.
 ```
 

@@ -38,7 +38,7 @@
       event.preventDefault();activateTab(names[i],true);
     });
   });
-  function matches(item, query) {return JSON.stringify(item, (key,value)=>key==='src'?undefined:value).toLowerCase().includes(query.trim().toLowerCase());}
+  function matches(item, query) {return (window.researchSearchText?.(item) || JSON.stringify(item, (key,value)=>key==='src'?undefined:value).toLowerCase()).includes(query.trim().toLowerCase());}
   function visible(kind) {return graph[kind].items.filter(p => (kind!=='map'||!S.map.core||p.core)&&matches(p,S[kind].query));}
   function nodeTitle(kind,p) {return kind==='map'?p.title:p.name;}
   function renderGraph(kind) {
@@ -92,9 +92,9 @@
     $(kind+'-canvas').querySelectorAll('[data-edge]').forEach(p=>{const on=related.some(e=>e.id===p.dataset.edge);p.classList.toggle('active',!!id&&on);p.classList.toggle('dim',!!id&&!on);});
     const shown=layouts[kind].pos,totalEdges=g.edges.length,visibleEdges=g.edges.filter(e=>shown.has(e.from)&&shown.has(e.to)).length;
     const box=$(kind+'-selection');
-    if(!id){box.innerHTML=`<p>${shown.size} / ${g.items.length} items · ${visibleEdges} / ${totalEdges} links visible.</p><small>Select a card to highlight relationships. Hidden links can be revealed with “Show all links”.</small>`;return;}
+    if(!id){box.innerHTML=`<p>${shown.size} / ${g.items.length} items · ${visibleEdges} / ${totalEdges} links</p>`;return;}
     const hidden=related.filter(e=>!shown.has(e.from)||!shown.has(e.to)).length;
-    box.innerHTML=`<p><strong>${esc(nodeTitle(kind,g.byId.get(id)))}</strong> · ${related.length} connections · ${hidden} hidden by filters${shown.has(id)?'':' · selected card is filtered out'}</p><button data-read-selected>Read details</button><details><summary>Relationship evidence (${related.length})</summary><ul>${related.map(e=>`<li>${edgeInfo(e,kind)}</li>`).join('')}</ul>${related.length?'':'<p>No relationships recorded.</p>'}</details>`;
+    box.innerHTML=`<p><strong>${esc(nodeTitle(kind,g.byId.get(id)))}</strong> · ${related.length} connections · ${hidden} filtered${shown.has(id)?'':' · selected card is filtered out'}</p><button data-read-selected>Details</button><details><summary>Relationship evidence (${related.length})</summary><ul>${related.map(e=>`<li>${edgeInfo(e,kind)}</li>`).join('')}</ul>${related.length?'':'<p>No relationships recorded.</p>'}</details>`;
     box.querySelector('[data-read-selected]').addEventListener('click',e=>openDetail(kind,id,e.currentTarget));
   }
   ['map','people'].forEach(kind=>{
@@ -143,10 +143,10 @@
     document.querySelectorAll('[data-index-paper]').forEach(b=>b.addEventListener('click',()=>openDetail('map',b.dataset.indexPaper,b)));
   }
   $('index-search').addEventListener('input',renderIndex);
-  $('title').textContent=D.title;$('summary').textContent=D.summary;$('cutoff').textContent='REVIEWED THROUGH '+D.as_of;
-  $('counts').textContent=`${D.papers.length} papers · ${D.researchers.length} researchers · ${D.edges.length} paper relationships`;$('demo').hidden=!D.demo;
+  $('title').textContent='Research Topic: '+(D.topic||D.title);$('cutoff').textContent='Reviewed: '+D.as_of;
+  $('counts').textContent=`${D.papers.length} papers · ${D.researchers.length} researchers · ${D.edges.length} links`;$('demo').hidden=!D.demo;
   $('mechanisms').innerHTML=D.papers.map(p=>`<article class="study"><span class="badge">${p.year} · ${esc(p.category)}</span><h3>${esc(p.title)}</h3>${flow(p)}${technical(p)}${cites(p.sources)}</article>`).join('');
-  $('scope').innerHTML=`<p>${esc(D.scope.review_type||'Selected literature review')} · cutoff ${esc(D.as_of)}</p><div class="scope-grid">${['inclusion','exclusions','gaps','queries'].map(k=>`<section><h3>${esc({inclusion:'Included scope',exclusions:'Exclusions',gaps:'Known gaps',queries:'Search log'}[k])}</h3><ul>${D.scope[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul>${D.scope[k].length?'':'<p>None recorded.</p>'}</section>`).join('')}</div>`;
+  $('scope').innerHTML=`<p>${esc(D.summary)}</p><p>${esc(D.scope.review_type||'Selected literature review')} · cutoff ${esc(D.as_of)}</p><div class="scope-grid">${['inclusion','exclusions','gaps','queries'].map(k=>`<section><h3>${esc({inclusion:'Included scope',exclusions:'Exclusions',gaps:'Known gaps',queries:'Search log'}[k])}</h3><ul>${D.scope[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul>${D.scope[k].length?'':'<p>None recorded.</p>'}</section>`).join('')}</div>`;
   $('source-list').innerHTML=D.sources.map(s=>`<li>${external(s.url,s.title)}<small>Read: ${esc(s.read)} · accessed ${esc(s.accessed)}${s.locator?' · '+esc(s.locator):''}</small></li>`).join('');
   renderGraph('map');renderGraph('people');renderIndex();
 })();

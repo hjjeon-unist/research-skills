@@ -1,7 +1,7 @@
 {
   "version": 1,
   "demo": true,
-  "title": "Learning to Predict — Fictional Atlas",
+  "title": "Predictive learning",
   "summary": "An illustrative sequence of ideas, experiments, and critiques. Explore the interaction model; none of these entries describe real research.",
   "language": "en",
   "as_of": "2026-10-19",
@@ -512,5 +512,42 @@
         "demo-source"
       ]
     }
-  ]
+  ],
+  "topic": "Predictive learning",
+  "translations": {
+    "ko": {
+      "Research Topic: Predictive learning": "연구 주제: 예측 학습",
+      "An illustrative sequence of ideas, experiments, and critiques. Explore the interaction model; none of these entries describe real research.": "아이디어·실험·비판의 흐름을 보여주는 가상 예시이며 실제 연구를 기술하지 않습니다.",
+      "Fictional UI demonstration, not a literature review": "문헌 검토가 아닌 가상 화면 예시",
+      "Five invented studies and four invented researchers.": "가상의 논문 5편과 연구자 4명.",
+      "All real papers, figures, portraits, and personal data.": "실제 논문·그림·사진·개인정보는 제외.",
+      "No scientific claims have been made or verified in this demonstration.": "이 예시에서 과학적 주장을 제시하거나 검증하지 않았습니다.",
+      "No literature searches were run for this fictional fixture.": "가상 예시를 위해 문헌 검색을 수행하지 않았습니다.",
+      "Fictional example source (not evidence)": "가상 출처 예시(연구 근거 아님)",
+      "Synthetic fixture only": "가상 테스트 자료",
+      "A predictive learning starting point": "예측 학습의 출발점",
+      "Learning by anticipating the next observation": "다음 관측을 예상하며 학습하기",
+      "Predicting across multiple temporal scales": "여러 시간 척도에서 예측하기",
+      "When accurate prediction misses useful structure": "정확한 예측이 유용한 구조를 놓칠 때",
+      "An alternative objective for stable representations": "안정적 표현을 위한 대안 목표",
+      "Fictional Methods Workshop": "가상 방법론 워크숍",
+      "Illustrative question: what information does prediction retain?": "예시 질문: 예측은 어떤 정보를 유지하는가?",
+      "An invented contribution used to demonstrate linked evidence and visual navigation.": "근거 연결과 화면 탐색을 보여주기 위한 가상의 기여.",
+      "A sequence of synthetic observations x₁ … xₜ.": "가상 관측 시퀀스 x₁ … xₜ.",
+      "A predicted next observation and an internal representation.": "예측한 다음 관측과 내부 표현.",
+      "Reduce an illustrative prediction error; no real experimental result is implied.": "예시 예측 오차를 줄인다. 실제 실험 결과를 뜻하지 않는다.",
+      "Illustrative encoder → temporal state → prediction head.": "예시 인코더 → 시간 상태 → 예측 출력층.",
+      "Fictional finding: the interface can display a sourced claim.": "가상 결과: 화면에 출처가 연결된 주장을 표시할 수 있다.",
+      "This is invented data and cannot support a scientific conclusion.": "가상 데이터이므로 과학적 결론의 근거가 될 수 없다.",
+      "Fictional prior context: a team studied representation stability.": "가상 선행 연구: 표현의 안정성을 연구했다.",
+      "Fictional current context: the team explored predictive objectives.": "가상 이번 연구: 예측 목표를 탐구했다.",
+      "Fictional later context: comparisons motivated further evaluation.": "가상 후속 연구: 비교 결과로 추가 평가를 진행했다.",
+      "An invented researcher used only to demonstrate linked team context.": "연구진 맥락의 연결을 보여주기 위한 가상 연구자.",
+      "Fictional role for demonstrating source-backed role display.": "출처 기반 역할 표시를 보여주는 가상 역할.",
+      "Fictional Institute One": "가상 연구기관 1",
+      "Fictional Institute Two": "가상 연구기관 2",
+      "Fictional connection: this typed edge demonstrates how an explanation and evidence remain inspectable.": "가상 연결: 유형별 설명과 근거를 확인하는 방식을 보여준다.",
+      "Fictional personal relationship for UI testing; it asserts no real biography.": "화면 검사용 가상 인적 관계이며 실제 이력을 주장하지 않는다."
+    }
+  }
 }

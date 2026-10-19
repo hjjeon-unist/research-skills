@@ -9,43 +9,41 @@
   <style>@@CSS@@</style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to atlas</a>
+<a class="skip" href="#main">Skip to content</a>
 <header class="wrap hero">
-  <p class="eyebrow">RESEARCH ATLAS <span id="cutoff"></span></p>
-  <h1 id="title"></h1><p id="summary" class="lead"></p>
-  <p id="counts" class="muted"></p><p id="demo" class="notice" hidden>Fictional demonstration — all studies, researchers, and relationships are illustrative. Example links are not evidence.</p>
+  <div class="heading-row"><h1 id="title"></h1><div class="language-switch" role="group" aria-label="Language" data-no-translate><button type="button" data-language="en" lang="en" aria-pressed="true">EN</button><button type="button" data-language="ko" lang="ko" aria-pressed="false">한국어</button></div></div>
+  <div class="heading-meta"><span id="counts"></span><span id="cutoff"></span></div>
+  <p id="demo" class="notice" hidden>Fictional demo · not research evidence.</p>
 </header>
-<nav class="glass nav" aria-label="Atlas views"><div class="wrap tabs" role="tablist">
-  <button role="tab" id="tab-map" aria-controls="panel-map" aria-selected="true" data-tab="map">Research map</button>
-  <button role="tab" id="tab-mechanisms" aria-controls="panel-mechanisms" aria-selected="false" tabindex="-1" data-tab="mechanisms">Mechanisms</button>
+<nav class="glass nav" aria-label="Research views"><div class="wrap tabs" role="tablist">
+  <button role="tab" id="tab-map" aria-controls="panel-map" aria-selected="true" data-tab="map">Map</button>
+  <button role="tab" id="tab-mechanisms" aria-controls="panel-mechanisms" aria-selected="false" tabindex="-1" data-tab="mechanisms">Models</button>
   <button role="tab" id="tab-people" aria-controls="panel-people" aria-selected="false" tabindex="-1" data-tab="people">Researchers</button>
-  <button role="tab" id="tab-index" aria-controls="panel-index" aria-selected="false" tabindex="-1" data-tab="index">Paper index</button>
-  <button role="tab" id="tab-sources" aria-controls="panel-sources" aria-selected="false" tabindex="-1" data-tab="sources">Scope & sources</button>
+  <button role="tab" id="tab-index" aria-controls="panel-index" aria-selected="false" tabindex="-1" data-tab="index">Papers</button>
+  <button role="tab" id="tab-sources" aria-controls="panel-sources" aria-selected="false" tabindex="-1" data-tab="sources">Sources</button>
 </div></nav>
 <main id="main" class="wrap">
   <section id="panel-map" role="tabpanel" aria-labelledby="tab-map">
-    <h2>Follow the ideas</h2><p class="muted">Select a paper to trace its connections. Activate it again to read the evidence.</p>
     <div id="map-controls" class="toolbar glass">
       <label class="search">Search papers <input type="search" id="map-search" placeholder="Title, author, question…"></label>
-      <label class="check"><input type="checkbox" id="core-only" checked> Core papers only</label>
-      <button data-reveal="map">Show all links</button><button data-clear="map">Clear selection</button>
+      <label class="check"><input type="checkbox" id="core-only" checked> Core only</label>
+      <button data-reveal="map">All links</button><button data-clear="map">Clear</button>
       <div class="zoom"><button data-zoom="map" data-step="-0.15" aria-label="Zoom out paper map">−</button><output id="map-zoom">100%</output><button data-zoom="map" data-step="0.15" aria-label="Zoom in paper map">+</button></div>
     </div>
-    <div class="legend"><span>→ Direction follows each relationship's explanation</span><span>Solid: documented</span><span>Dashed: inferred</span></div>
+    <div class="legend"><span><i class="legend-solid" aria-hidden="true"></i>Documented</span><span><i class="legend-dashed" aria-hidden="true"></i>Inferred</span></div>
     <div class="viewport" id="map-viewport" tabindex="0" aria-label="Scrollable paper graph"><div id="map-sizer"><div id="map-canvas" class="canvas"></div></div></div>
     <div class="selection" id="map-selection" aria-live="polite"></div>
   </section>
-  <section id="panel-mechanisms" role="tabpanel" aria-labelledby="tab-mechanisms" hidden><h2>What goes in. What comes out. What is learned.</h2><div id="mechanisms"></div></section>
+  <section id="panel-mechanisms" role="tabpanel" aria-labelledby="tab-mechanisms" hidden><h2>Input / output</h2><div id="mechanisms"></div></section>
   <section id="panel-people" role="tabpanel" aria-labelledby="tab-people" hidden>
-    <h2>People & research programs</h2><p class="muted">Documented personal relationships. Conceptual links remain in the paper map.</p>
-    <div class="toolbar glass"><label class="search">Search researchers <input type="search" id="people-search" placeholder="Name, context, affiliation…"></label><button data-reveal="people">Show all links</button><button data-clear="people">Clear selection</button><div class="zoom"><button data-zoom="people" data-step="-0.15" aria-label="Zoom out researcher map">−</button><output id="people-zoom">100%</output><button data-zoom="people" data-step="0.15" aria-label="Zoom in researcher map">+</button></div></div>
+    <div class="toolbar glass"><label class="search">Search researchers <input type="search" id="people-search" placeholder="Name, context, affiliation…"></label><button data-reveal="people">All links</button><button data-clear="people">Clear</button><div class="zoom"><button data-zoom="people" data-step="-0.15" aria-label="Zoom out researcher map">−</button><output id="people-zoom">100%</output><button data-zoom="people" data-step="0.15" aria-label="Zoom in researcher map">+</button></div></div>
     <div class="viewport" id="people-viewport" tabindex="0" aria-label="Scrollable researcher graph"><div id="people-sizer"><div id="people-canvas" class="canvas"></div></div></div>
     <div class="selection" id="people-selection" aria-live="polite"></div>
   </section>
-  <section id="panel-index" role="tabpanel" aria-labelledby="tab-index" hidden><h2>Paper index</h2><label class="search">Search all papers <input id="index-search" type="search"></label><div id="paper-index"></div></section>
+  <section id="panel-index" role="tabpanel" aria-labelledby="tab-index" hidden><h2>Papers</h2><label class="search">Search all papers <input id="index-search" type="search"></label><div id="paper-index"></div></section>
   <section id="panel-sources" role="tabpanel" aria-labelledby="tab-sources" hidden><h2>Scope & sources</h2><div id="scope"></div><ol id="source-list"></ol></section>
 </main>
-<footer class="wrap">A selected literature map. Read source evidence and coverage notes before drawing conclusions.</footer>
+
 <dialog id="detail" aria-labelledby="detail-title"><div class="dialogbar glass"><button id="back" hidden>← Back</button><span id="detail-kind"></span><button id="close" aria-label="Close details">Close ×</button></div><div id="detail-body"></div></dialog>
 <script type="application/json" id="atlas-data">@@DATA@@</script>
 <script>@@JS@@</script>

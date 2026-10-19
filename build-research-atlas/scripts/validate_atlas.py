@@ -125,13 +125,26 @@ def media_bytes(media, base, where):
 
 
 def validate(data, base):
-    obj(data, 'atlas', ['version', 'title', 'summary', 'language', 'as_of', 'scope', 'sources', 'papers', 'researchers', 'edges', 'researcher_edges'], ['demo'])
+    obj(data, 'atlas', ['version', 'title', 'summary', 'language', 'as_of', 'scope', 'sources', 'papers', 'researchers', 'edges', 'researcher_edges'], ['demo', 'topic', 'translations'])
     require(type(data['version']) is int and data['version'] == 1, 'version', 'only version 1 is supported')
     for key in ['title', 'summary', 'language']:
         string(data[key], key)
     require(bool(re.fullmatch(r'[a-zA-Z]{2,8}(?:-[a-zA-Z0-9]{1,8})*', data['language'])), 'language', 'invalid language tag')
     if 'demo' in data:
         require(type(data['demo']) is bool, 'demo', 'must be boolean')
+    if 'topic' in data:
+        string(data['topic'], 'topic')
+    if 'translations' in data:
+        obj(data['translations'], 'translations', [], ['en', 'ko'])
+        for language, catalog in data['translations'].items():
+            require(isinstance(catalog, dict), 'translations.' + language, 'must be a text dictionary')
+            require(len(catalog) <= 10000, 'translations.' + language, 'too many entries')
+            for original, translated in catalog.items():
+                string(original, 'translation source')
+                string(translated, 'translation value')
+                require(original == original.strip(), 'translation source', 'trim surrounding whitespace')
+                require(len(original) <= 20000 and len(translated) <= 20000, 'translation', 'text exceeds 20000 characters')
+                require(original not in {'__proto__', 'constructor', 'prototype'}, 'translation source', 'reserved key')
     date(data['as_of'], 'as_of')
     scope = data['scope']
     obj(scope, 'scope', ['inclusion', 'exclusions', 'gaps', 'queries'], ['review_type'])

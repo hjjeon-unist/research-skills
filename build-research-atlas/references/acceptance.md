@@ -22,3 +22,11 @@ Run the validator and builder. In a browser check the real data, not only a fixt
 - On larger datasets, inspect cross-year links and crowding. Adjust the template when the graph becomes hard to follow; no fixed count guarantees a readable map.
 
 Report the checks actually performed. A valid JSON document does not establish scientific accuracy, and passing the synthetic UI fixture does not establish the quality of a real literature review.
+
+
+## Concise bilingual interface
+
+- Header uses `Research Topic: <topic>` / `연구 주제: <topic>` with EN / 한국어 controls, compact counts, and date. No Research Atlas branding, promotional introduction, rhetorical question, or click-instruction paragraph.
+- Verify translations of research explanations and dynamically opened paper/researcher details; keep citations, proper names, and formulas intact. Missing translations remain original and are reported.
+- Switch twice and verify the source text restores exactly. Preserve tab, filter, selected node, zoom, scroll, and open-detail state. Confirm translated search and language persistence after reload.
+- Check desktop and narrow mobile layouts in both languages; buttons need accessible names and a visible selected language.

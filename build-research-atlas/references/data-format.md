@@ -54,3 +54,18 @@ All edges require `id`, `from`, `to`, `type`, `explanation`, `confidence` (`docu
 `figure` and `portrait`: required `path`, `alt`, `caption`, `source_url`, `credit`, `license`, and `reuse_confirmed: true`. Paths are relative to the JSON file's directory. Absolute paths, traversal, symlink escapes, remote URLs in `path`, and active formats such as SVG are rejected. Supported formats are PNG, JPEG, GIF, and WebP, at most 8 MiB each and 32 MiB total. The builder checks file signatures and embeds data URLs; it never downloads media. The confirmation is an author assertion, not automatic legal verification.
 
 When reuse permission is absent, omit the media object. Put a public original figure/profile link in the source ledger instead. No image binary is required for a valid atlas.
+
+
+## Topic and bilingual content
+
+Optional `topic` is the short subject used in `Research Topic: <topic>`; it falls back to `title`. The `summary` remains in Scope & sources, not the landing header.
+
+Optional `translations` has `ko` and/or `en` dictionaries mapping an exact, trimmed source string to its translated text. Example:
+
+```json
+{"topic":"Predictive learning","translations":{"ko":{"Research Topic: Predictive learning":"연구 주제: 예측 학습","What does prediction retain?":"예측은 어떤 정보를 유지하는가?"}}}
+```
+
+The renderer ships English/Korean control labels. Author and review content translations for the research explanations, not just the navigation. Preserve qualifications, negative results, dates, attribution, and uncertainty. Formal titles, names, identifiers, and source citations can remain in their original language. A missing translation falls back to the source string; this is not automatic machine translation. Report incomplete coverage explicitly.
+
+Text is updated in place, including accessible labels and dynamically opened details. It is never inserted as executable HTML. Do not use catalogs to change URLs, IDs, formulas, or image pixels. Structured scientific formulas and source code remain unchanged. Dictionaries allow up to 10,000 entries, each at most 20,000 characters, and reject reserved object keys. `language` sets the initial language when it is `en` or `ko`; a saved per-file choice takes precedence when browser storage is available.

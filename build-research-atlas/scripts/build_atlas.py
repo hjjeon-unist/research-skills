@@ -31,7 +31,7 @@ def build(dataset, output):
     payload = json.dumps(data, ensure_ascii=True).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     values = {'TITLE': html.escape(data['title']), 'LANG': html.escape(data['language'], quote=True),
               'CSS': (ASSETS / 'atlas.css').read_text(encoding='utf-8'),
-              'JS': (ASSETS / 'atlas.js').read_text(encoding='utf-8'), 'DATA': payload}
+              'JS': (ASSETS / 'atlas.js').read_text(encoding='utf-8') + '\n' + (ASSETS / 'language.js').read_text(encoding='utf-8'), 'DATA': payload}
     template = (ASSETS / 'atlas.html').read_text(encoding='utf-8')
     rendered = re.sub(r'@@(TITLE|LANG|CSS|JS|DATA)@@', lambda match: values[match[1]], template)
     output.parent.mkdir(parents=True, exist_ok=True)

@@ -114,6 +114,20 @@ class AtlasTests(unittest.TestCase):
         for paper in self.data['papers']:paper['researcher_ids']=[]
         validate(self.data,self.root)
 
+    def test_translation_catalog_rejects_invalid_entries(self):
+        for catalog in [{'fr':{}}, {'ko':[]}, {'ko':{'x':['not text']}}, {'ko':{'__proto__':'bad'}}, {'ko':{' padded ':'text'}}, {'ko':{'x':''}}]:
+            with self.subTest(catalog=catalog):
+                self.data['translations']=catalog
+                with self.assertRaises(ValueError):validate(self.data,self.root)
+
+    def test_translations_are_inert_and_roundtrip(self):
+        self.data['translations']={'ko':{'Research question':'</script><img src=x onerror=alert(1)>'}}
+        result=build(self.write(),self.root/'translated.html').read_text(encoding='utf8')
+        payload=re.search(r'id="atlas-data">(.*?)</script>',result,re.S)[1]
+        self.assertEqual(json.loads(payload)['translations'],self.data['translations'])
+        self.assertNotIn('</script><img src=x',result)
+        self.assertIn('data-language="ko"',result)
+
 
 if __name__ == '__main__':
     unittest.main()
