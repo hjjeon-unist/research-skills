@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Research Atlas"
+  short_description: "Cited literature maps and interactive research atlases"
+  default_prompt: "Use $build-research-atlas to research a topic and create an evidence-backed interactive HTML atlas."

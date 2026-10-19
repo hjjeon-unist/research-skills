@@ -1,0 +1,16 @@
+# Local research projects and generated artifacts are not skill source.
+work/
+outputs/
+projects/
+private/
+.env
+.env.*
+*.pem
+*.key
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+test-results/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,516 @@
+{
+  "version": 1,
+  "demo": true,
+  "title": "Learning to Predict — Fictional Atlas",
+  "summary": "An illustrative sequence of ideas, experiments, and critiques. Explore the interaction model; none of these entries describe real research.",
+  "language": "en",
+  "as_of": "2026-10-19",
+  "scope": {
+    "review_type": "Fictional UI demonstration, not a literature review",
+    "inclusion": [
+      "Five invented studies and four invented researchers."
+    ],
+    "exclusions": [
+      "All real papers, figures, portraits, and personal data."
+    ],
+    "gaps": [
+      "No scientific claims have been made or verified in this demonstration."
+    ],
+    "queries": [
+      "No literature searches were run for this fictional fixture."
+    ]
+  },
+  "sources": [
+    {
+      "id": "demo-source",
+      "title": "Fictional example source (not evidence)",
+      "url": "https://example.org/fictional-atlas",
+      "accessed": "2026-10-19",
+      "read": "metadata",
+      "locator": "Synthetic fixture only"
+    }
+  ],
+  "papers": [
+    {
+      "id": "prior",
+      "title": "A predictive learning starting point",
+      "year": 2019,
+      "venue": "Fictional Methods Workshop",
+      "authors": [
+        "Demo Researcher A"
+      ],
+      "category": "antecedent",
+      "core": true,
+      "url": "https://example.org/fictional/prior",
+      "question": "Illustrative question: what information does prediction retain?",
+      "contribution": "An invented contribution used to demonstrate linked evidence and visual navigation.",
+      "mechanism": {
+        "input": "A sequence of synthetic observations x₁ … xₜ.",
+        "output": "A predicted next observation and an internal representation.",
+        "objective": "Reduce an illustrative prediction error; no real experimental result is implied.",
+        "architecture": "Illustrative encoder → temporal state → prediction head.",
+        "loss": "Illustrative only: L = mean((prediction − target)²)"
+      },
+      "findings": [
+        {
+          "text": "Fictional finding: the interface can display a sourced claim.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "limitations": [
+        {
+          "text": "This is invented data and cannot support a scientific conclusion.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "sources": [
+        "demo-source"
+      ],
+      "researcher_ids": [
+        "person-a"
+      ],
+      "team_context": {
+        "before": {
+          "text": "Fictional prior context: a team studied representation stability.",
+          "sources": [
+            "demo-source"
+          ]
+        },
+        "current": {
+          "text": "Fictional current context: the team explored predictive objectives.",
+          "sources": [
+            "demo-source"
+          ]
+        },
+        "after": {
+          "text": "Fictional later context: comparisons motivated further evaluation.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      }
+    },
+    {
+      "id": "seed",
+      "title": "Learning by anticipating the next observation",
+      "year": 2021,
+      "venue": "Fictional Methods Workshop",
+      "authors": [
+        "Demo Researcher A",
+        "Demo Researcher B"
+      ],
+      "category": "original",
+      "core": true,
+      "url": "https://example.org/fictional/seed",
+      "question": "Illustrative question: what information does prediction retain?",
+      "contribution": "An invented contribution used to demonstrate linked evidence and visual navigation.",
+      "mechanism": {
+        "input": "A sequence of synthetic observations x₁ … xₜ.",
+        "output": "A predicted next observation and an internal representation.",
+        "objective": "Reduce an illustrative prediction error; no real experimental result is implied.",
+        "architecture": "Illustrative encoder → temporal state → prediction head.",
+        "loss": "Illustrative only: L = mean((prediction − target)²)"
+      },
+      "findings": [
+        {
+          "text": "Fictional finding: the interface can display a sourced claim.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "limitations": [
+        {
+          "text": "This is invented data and cannot support a scientific conclusion.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "sources": [
+        "demo-source"
+      ],
+      "researcher_ids": [
+        "person-a",
+        "person-b"
+      ],
+      "team_context": {
+        "before": {
+          "text": "Fictional prior context: a team studied representation stability.",
+          "sources": [
+            "demo-source"
+          ]
+        },
+        "current": {
+          "text": "Fictional current context: the team explored predictive objectives.",
+          "sources": [
+            "demo-source"
+          ]
+        },
+        "after": {
+          "text": "Fictional later context: comparisons motivated further evaluation.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      }
+    },
+    {
+      "id": "extend",
+      "title": "Predicting across multiple temporal scales",
+      "year": 2022,
+      "venue": "Fictional Methods Workshop",
+      "authors": [
+        "Demo Researcher B",
+        "Demo Researcher C"
+      ],
+      "category": "extension",
+      "core": true,
+      "url": "https://example.org/fictional/extend",
+      "question": "Illustrative question: what information does prediction retain?",
+      "contribution": "An invented contribution used to demonstrate linked evidence and visual navigation.",
+      "mechanism": {
+        "input": "A sequence of synthetic observations x₁ … xₜ.",
+        "output": "A predicted next observation and an internal representation.",
+        "objective": "Reduce an illustrative prediction error; no real experimental result is implied.",
+        "architecture": "Illustrative encoder → temporal state → prediction head.",
+        "loss": "Illustrative only: L = mean((prediction − target)²)"
+      },
+      "findings": [
+        {
+          "text": "Fictional finding: the interface can display a sourced claim.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "limitations": [
+        {
+          "text": "This is invented data and cannot support a scientific conclusion.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "sources": [
+        "demo-source"
+      ],
+      "researcher_ids": [
+        "person-b",
+        "person-c"
+      ],
+      "team_context": {
+        "before": {
+          "text": "Fictional prior context: a team studied representation stability.",
+          "sources": [
+            "demo-source"
+          ]
+        },
+        "current": {
+          "text": "Fictional current context: the team explored predictive objectives.",
+          "sources": [
+            "demo-source"
+          ]
+        },
+        "after": {
+          "text": "Fictional later context: comparisons motivated further evaluation.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      }
+    },
+    {
+      "id": "critique",
+      "title": "When accurate prediction misses useful structure",
+      "year": 2023,
+      "venue": "Fictional Methods Workshop",
+      "authors": [
+        "Demo Researcher D"
+      ],
+      "category": "critique",
+      "core": false,
+      "url": "https://example.org/fictional/critique",
+      "question": "Illustrative question: what information does prediction retain?",
+      "contribution": "An invented contribution used to demonstrate linked evidence and visual navigation.",
+      "mechanism": {
+        "input": "A sequence of synthetic observations x₁ … xₜ.",
+        "output": "A predicted next observation and an internal representation.",
+        "objective": "Reduce an illustrative prediction error; no real experimental result is implied.",
+        "architecture": "Illustrative encoder → temporal state → prediction head.",
+        "loss": "Illustrative only: L = mean((prediction − target)²)"
+      },
+      "findings": [
+        {
+          "text": "Fictional finding: the interface can display a sourced claim.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "limitations": [
+        {
+          "text": "This is invented data and cannot support a scientific conclusion.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "sources": [
+        "demo-source"
+      ],
+      "researcher_ids": [
+        "person-d"
+      ],
+      "team_context": {
+        "before": {
+          "text": "Fictional prior context: a team studied representation stability.",
+          "sources": [
+            "demo-source"
+          ]
+        },
+        "current": {
+          "text": "Fictional current context: the team explored predictive objectives.",
+          "sources": [
+            "demo-source"
+          ]
+        },
+        "after": {
+          "text": "Fictional later context: comparisons motivated further evaluation.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      }
+    },
+    {
+      "id": "alternative",
+      "title": "An alternative objective for stable representations",
+      "year": 2023,
+      "venue": "Fictional Methods Workshop",
+      "authors": [
+        "Demo Researcher C"
+      ],
+      "category": "alternative",
+      "core": false,
+      "url": "https://example.org/fictional/alternative",
+      "question": "Illustrative question: what information does prediction retain?",
+      "contribution": "An invented contribution used to demonstrate linked evidence and visual navigation.",
+      "mechanism": {
+        "input": "A sequence of synthetic observations x₁ … xₜ.",
+        "output": "A predicted next observation and an internal representation.",
+        "objective": "Reduce an illustrative prediction error; no real experimental result is implied.",
+        "architecture": "Illustrative encoder → temporal state → prediction head.",
+        "loss": "Illustrative only: L = mean((prediction − target)²)"
+      },
+      "findings": [
+        {
+          "text": "Fictional finding: the interface can display a sourced claim.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "limitations": [
+        {
+          "text": "This is invented data and cannot support a scientific conclusion.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "sources": [
+        "demo-source"
+      ],
+      "researcher_ids": [
+        "person-c"
+      ],
+      "team_context": {
+        "before": {
+          "text": "Fictional prior context: a team studied representation stability.",
+          "sources": [
+            "demo-source"
+          ]
+        },
+        "current": {
+          "text": "Fictional current context: the team explored predictive objectives.",
+          "sources": [
+            "demo-source"
+          ]
+        },
+        "after": {
+          "text": "Fictional later context: comparisons motivated further evaluation.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      }
+    }
+  ],
+  "researchers": [
+    {
+      "id": "person-a",
+      "name": "Demo Researcher A",
+      "context": "An invented researcher used only to demonstrate linked team context.",
+      "affiliation_at_study": "Fictional Institute One",
+      "roles": [
+        {
+          "text": "Fictional role for demonstrating source-backed role display.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "sources": [
+        "demo-source"
+      ]
+    },
+    {
+      "id": "person-b",
+      "name": "Demo Researcher B",
+      "context": "An invented researcher used only to demonstrate linked team context.",
+      "affiliation_at_study": "Fictional Institute One",
+      "roles": [
+        {
+          "text": "Fictional role for demonstrating source-backed role display.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "sources": [
+        "demo-source"
+      ]
+    },
+    {
+      "id": "person-c",
+      "name": "Demo Researcher C",
+      "context": "An invented researcher used only to demonstrate linked team context.",
+      "affiliation_at_study": "Fictional Institute Two",
+      "roles": [
+        {
+          "text": "Fictional role for demonstrating source-backed role display.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "sources": [
+        "demo-source"
+      ]
+    },
+    {
+      "id": "person-d",
+      "name": "Demo Researcher D",
+      "context": "An invented researcher used only to demonstrate linked team context.",
+      "affiliation_at_study": "Fictional Institute Two",
+      "roles": [
+        {
+          "text": "Fictional role for demonstrating source-backed role display.",
+          "sources": [
+            "demo-source"
+          ]
+        }
+      ],
+      "sources": [
+        "demo-source"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "origin",
+      "from": "prior",
+      "to": "seed",
+      "type": "antecedent",
+      "confidence": "documented",
+      "explanation": "Fictional connection: this typed edge demonstrates how an explanation and evidence remain inspectable.",
+      "sources": [
+        "demo-source"
+      ]
+    },
+    {
+      "id": "extension",
+      "from": "seed",
+      "to": "extend",
+      "type": "extension",
+      "confidence": "documented",
+      "explanation": "Fictional connection: this typed edge demonstrates how an explanation and evidence remain inspectable.",
+      "sources": [
+        "demo-source"
+      ]
+    },
+    {
+      "id": "criticism",
+      "from": "seed",
+      "to": "critique",
+      "type": "critique",
+      "confidence": "documented",
+      "explanation": "Fictional connection: this typed edge demonstrates how an explanation and evidence remain inspectable.",
+      "sources": [
+        "demo-source"
+      ]
+    },
+    {
+      "id": "comparison",
+      "from": "seed",
+      "to": "alternative",
+      "type": "alternative",
+      "confidence": "inferred",
+      "explanation": "Fictional connection: this typed edge demonstrates how an explanation and evidence remain inspectable.",
+      "sources": [
+        "demo-source"
+      ]
+    },
+    {
+      "id": "counterpoint",
+      "from": "extend",
+      "to": "alternative",
+      "type": "alternative",
+      "confidence": "inferred",
+      "explanation": "Fictional connection: this typed edge demonstrates how an explanation and evidence remain inspectable.",
+      "sources": [
+        "demo-source"
+      ]
+    }
+  ],
+  "researcher_edges": [
+    {
+      "id": "team-ab",
+      "from": "person-a",
+      "to": "person-b",
+      "type": "coauthor",
+      "confidence": "documented",
+      "explanation": "Fictional personal relationship for UI testing; it asserts no real biography.",
+      "sources": [
+        "demo-source"
+      ]
+    },
+    {
+      "id": "team-bc",
+      "from": "person-b",
+      "to": "person-c",
+      "type": "coauthor",
+      "confidence": "documented",
+      "explanation": "Fictional personal relationship for UI testing; it asserts no real biography.",
+      "sources": [
+        "demo-source"
+      ]
+    },
+    {
+      "id": "mentor",
+      "from": "person-a",
+      "to": "person-c",
+      "type": "supervision",
+      "confidence": "documented",
+      "explanation": "Fictional personal relationship for UI testing; it asserts no real biography.",
+      "sources": [
+        "demo-source"
+      ]
+    }
+  ]
+}
